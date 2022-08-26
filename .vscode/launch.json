@@ -1,32 +1,47 @@
 {
 	"version": "0.2.0",
-	"configurations": [{
-		"name": "Launch Client (Mono)",
-		"type": "mono",
-		"request": "launch",
-		"preLaunchTask": "Build (Debug)",
-		"program": "${env:VINTAGE_STORY}/Vintagestory.exe",
-		"args": [
-			"--playStyle" , "preset-surviveandbuild",
-			"--openWorld" , "modding test world",
-			"--addModPath", "${workspaceFolder}/bin/Debug/net461",
-			"--addOrigin" , "${workspaceFolder}/resources/assets",
-		],
-		"console": "internalConsole",
-		"internalConsoleOptions": "openOnSessionStart",
-	},{
-		"name": "Launch Client (.NET)",
-		"type": "clr",
-		"request": "launch",
-		"preLaunchTask": "Build (Debug)",
-		"program": "${env:VINTAGE_STORY}/Vintagestory.exe",
-		"args": [
-			"--playStyle" , "preset-surviveandbuild",
-			"--openWorld" , "modding test world",
-			"--addModPath", "${workspaceFolder}/bin/Debug/net461",
-			"--addOrigin" , "${workspaceFolder}/resources/assets",
-		],
-		"console": "internalConsole",
-		"internalConsoleOptions": "openOnSessionStart",
-	}]
+	"configurations": [
+		{
+			"name": "Launch Client (Mono)",
+			"type": "mono",
+			"request": "launch",
+			"preLaunchTask": "Build (Debug)",
+			"program": "${env:HOME}/Games/vintagestory-1.17-rc5/Vintagestory.exe",
+			"args": [
+				"--playStyle",
+				"preset-surviveandbuild",
+				"--openWorld",
+				"modding test world",
+				"--addModPath",
+				"${workspaceFolder}/bin/Debug/net461",
+				"--addOrigin",
+				"${workspaceFolder}/resources/assets",
+				"--dataPath",
+				"${env:HOME}/Games/vintagestory-1.17-rc5/data"
+			],
+			"console": "internalConsole",
+			"internalConsoleOptions": "openOnSessionStart",
+		},
+		{
+			"name": "Launch Client (.NET)",
+			"type": "clr",
+			"request": "launch",
+			"preLaunchTask": "Build (Debug)",
+			"program": "${env:HOME}/Games/vintagestory-1.17-rc5/Vintagestory.exe",
+			"args": [
+				"--playStyle",
+				"preset-surviveandbuild",
+				"--openWorld",
+				"modding test world",
+				"--addModPath",
+				"${workspaceFolder}/bin/Debug/net461",
+				"--addOrigin",
+				"${workspaceFolder}/resources/assets",
+				"--dataPath",
+				"${env:HOME}/Games/vintagestory-1.17-rc5/data"
+			],
+			"console": "internalConsole",
+			"internalConsoleOptions": "openOnSessionStart",
+		}
+	]
 }

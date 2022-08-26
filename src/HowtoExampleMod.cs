@@ -2,28 +2,29 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 
-[assembly: ModInfo( "HowtoExample",
-	Description = "An example mod using VS Code and .NET",
-	Website     = "https://github.com/copygirl/howto-example-mod",
-	Authors     = new []{ "copygirl" } )]
+[assembly: ModInfo( "Bloods'n'Guts",
+	Description = "R-rated gore and also useful stuffs related",
+	Website     = "https://github.com/kane-thornwyrd/bloodsnguts",
+	Version 		= "0.0.1",
+	Authors     = new []{ "Kane Thornwyrd" } )]
 
-namespace HowtoExample
+namespace Bloodsnguts
 {
-	public class HowtoExampleMod : ModSystem
+	public class bloodsngutsMod : ModSystem
 	{
 		public override void Start(ICoreAPI api)
 		{
 			api.RegisterBlockBehaviorClass(InstaTNTBehavior.NAME, typeof(InstaTNTBehavior));
 		}
-		
+
 		public override void StartClientSide(ICoreClientAPI api)
 		{
-			
+
 		}
-		
+
 		public override void StartServerSide(ICoreServerAPI api)
 		{
-			
+
 		}
 	}
 }

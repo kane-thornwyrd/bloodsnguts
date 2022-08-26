@@ -2,22 +2,22 @@
 	<PropertyGroup>
 		<TargetFramework>net461</TargetFramework>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
 		<Reference Include="VintagestoryAPI">
 			<HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<!-- <Reference Include="VintagestoryAPI">
+		<Reference Include="VintagestoryAPI">
 			<HintPath>$(VINTAGE_STORY)/Mods/VSEssentials.dll</HintPath>
 			<Private>false</Private>
-		</Reference> -->
-		<!-- <Reference Include="VintagestoryAPI">
+		</Reference>
+		<Reference Include="VintagestoryAPI">
 			<HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
 			<Private>false</Private>
-		</Reference> -->
+		</Reference>
 	</ItemGroup>
-	
+
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
 		<None Include="UNLICENSE" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="resources/**">
@@ -25,7 +25,7 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-	
+
 	<Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
 		<ZipDirectory DestinationFile="bin/$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
 	</Target>
